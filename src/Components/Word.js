@@ -6,9 +6,7 @@ const Word = props => {
 	let splitCorrect = props.selectedWord.split("");
 	const row = splitCorrect.map(inp => (
 		<div className="colC">
-			<div className="word">
-				<h1>{props.correctLetters.includes(inp) ? inp : ""}</h1>
-			</div>
+			<h1>{props.correctLetters.includes(inp) ? inp : ""}</h1>
 		</div>
 	));
 	<div className="rowC">{row}</div>;
