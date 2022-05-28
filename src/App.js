@@ -37,13 +37,15 @@ function App() {
       }, [correctLetters, wrongLetters, playable]);
     
   return (    
-    <div className="body">
-  <Header />
-        <Figure wrongLetters={wrongLetters}/>
-        <WrongLetters wrongLetters={wrongLetters} />
-        <Word selectedWord={selectedWord} correctLetters={correctLetters} />
-        <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} />
-        </div> 
+    <div className="contain">
+      <div className="body">
+          <Header />
+          <Figure wrongLetters={wrongLetters}/>
+          <WrongLetters wrongLetters={wrongLetters} />
+          <Word selectedWord={selectedWord} correctLetters={correctLetters} />
+          <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} />
+      </div> 
+    </div>
   )
 }
 export default App;
