@@ -40,7 +40,9 @@ function App() {
     <div className="contain">
       <div className="body">
           <Header />
+          <div className="figCont">
           <Figure wrongLetters={wrongLetters}/>
+          </div>
           <WrongLetters wrongLetters={wrongLetters} />
           <Word selectedWord={selectedWord} correctLetters={correctLetters} />
           <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} />
