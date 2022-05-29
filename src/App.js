@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react'
 import Word from './Components/Word'
 import Popup from "./Components/Popup";
 import WrongLetters from './Components/WrongLetters';
-const wordList = ['singapore', 'tiktok', 'camp', 'youth']
+const wordList = ['singapore', 'tiktok', 'camp', 'youth', 'javascript', 'coding', 'computer', 'engineer', 'web', 'development', 'react', 'bootcamp', 'resources', 'online', 'internet', 'server', 'andriod', 'project', 'programmer', 'technology', 'debugging']
 let selectedWord = wordList[Math.floor(Math.random() * wordList.length)]
 function App() {
     
@@ -37,13 +37,17 @@ function App() {
       }, [correctLetters, wrongLetters, playable]);
     
   return (    
-    <div className="body">
-  <Header />
-        <Figure wrongLetters={wrongLetters}/>
-        <WrongLetters wrongLetters={wrongLetters} />
-        <Word selectedWord={selectedWord} correctLetters={correctLetters} />
-        <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} />
-        </div> 
+    <div className="contain">
+      <div className="body">
+          <Header />
+          <div className="figCont">
+          <Figure wrongLetters={wrongLetters}/>
+          </div>
+          <WrongLetters wrongLetters={wrongLetters} />
+          <Word selectedWord={selectedWord} correctLetters={correctLetters} />
+          <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} />
+      </div> 
+    </div>
   )
 }
 export default App;
